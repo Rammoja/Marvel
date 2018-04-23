@@ -43,6 +43,7 @@ INSERT INTO people (name) VALUES ('Colin Tindle');
 INSERT INTO people (name) VALUES ('Rachel Westwater');
 INSERT INTO people (name) VALUES ('Andrew Smith');
 INSERT INTO people (name) VALUES ('Zsolt Podoba-Szalai');
+INSERT INTO people (name) VALUES ('Sandy Mcmillan');
 
 INSERT INTO movies (title, year, show_time) VALUES ('Iron Man', 2008, '19:55');
 INSERT INTO movies (title, year, show_time) VALUES ('The Incredible Hulk', 2008, '18:40');
@@ -59,6 +60,7 @@ INSERT INTO movies (title, year, show_time) VALUES ('Avengers: Age of Ultron', 2
 INSERT INTO movies (title, year, show_time) VALUES ('Ant-Man', 2015, '13:50');
 INSERT INTO movies (title, year, show_time) VALUES ('Captain America: Civil War', 2016, '21:30');
 INSERT INTO movies (title, year, show_time) VALUES ('Doctor Strange', 2016, '17:55');
+INSERT INTO movies (title, year, show_time) VALUES ('Guardians of the Galaxy 2', 2016, '18:55');
 
 INSERT INTO attendances (person_id, movie_id) VALUES (2, 13);
 INSERT INTO attendances (person_id, movie_id) VALUES (22, 7);
@@ -150,8 +152,16 @@ INSERT INTO attendances (person_id, movie_id) VALUES (5, 8);
 INSERT INTO attendances (person_id, movie_id) VALUES (1, 1);
 INSERT INTO attendances (person_id, movie_id) VALUES (21, 4);
 
-
-
+UPDATE movies SET show_time = ('21:30') Where title = 'Guardians of the Galaxy';
+DELETE FROM movies WHERE  title = 'Batman Begins';
 SELECT * FROM movies;
-SELECT name FROM people;
+
+
+
+UPDATE people SET name = ('Jeff 4') Where name = 'Andrew Laughlin';
+UPDATE people SET name = ('Jeff 5') Where name = 'Andrew Smith';
+
+DELETE FROM people WHERE  name = 'Zsolt Podoba-Szalai';
 UPDATE people SET name = 'Davina Sanders' WHERE name = 'Davinda Sanders';
+SELECT name FROM people;
+SELECT * FROM people WHERE name = 'Richard Ramson';
